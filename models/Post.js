@@ -10,7 +10,11 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   Post.init({
-    name: DataTypes.STRING
+    title: DataTypes.STRING,
+    url: DataTypes.STRING,
+    digest: DataTypes.TEXT,
+    date: DataTypes.DATE,
+    organizationId: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'Post',

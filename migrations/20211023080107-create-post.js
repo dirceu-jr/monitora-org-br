@@ -8,16 +8,24 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      name: {
+      title: {
         type: Sequelize.STRING
+      },
+      url: {
+        type: Sequelize.STRING(2048)
+      },
+      digest: {
+        type: Sequelize.TEXT
+      },
+      date: {
+        type: Sequelize.DATE
       },
       organizationId: {
         type: Sequelize.INTEGER,
         references: {
           model: {
-            tableName: 'organizations'
-          },
-          key: 'id'
+            tableName: 'Organizations'
+          }
         },
         allowNull: false
       },
