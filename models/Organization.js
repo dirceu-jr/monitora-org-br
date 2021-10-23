@@ -11,7 +11,8 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   Organization.init({
-    name: DataTypes.STRING
+    name: DataTypes.STRING,
+    favicon: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Organization',

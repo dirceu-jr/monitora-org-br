@@ -11,6 +11,9 @@ module.exports = {
       name: {
         type: Sequelize.STRING
       },
+      favicon: {
+        type: Sequelize.STRING(2048)
+      },
       cityId: {
         type: Sequelize.INTEGER,
         references: {
