@@ -1,0 +1,30 @@
+{
+  "name": "monitora-org-br",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dirceup/monitora-org-br.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dirceup/monitora-org-br/issues"
+  },
+  "homepage": "https://github.com/dirceup/monitora-org-br#readme",
+  "dependencies": {
+    "axios": "^0.23.0",
+    "cheerio": "^1.0.0-rc.10",
+    "reflect-metadata": "^0.1.13",
+    "sqlite3": "^5.0.2",
+    "typeorm": "^0.2.38"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.4"
+  }
+}
