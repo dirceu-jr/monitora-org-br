@@ -1,17 +1,20 @@
-const Sequelize = require('sequelize');
-const database = require('../db');
- 
-const Organization = database.define('Organization', {
-    id: {
-        type: Sequelize.INTEGER,
-        autoIncrement: true,
-        allowNull: false,
-        primaryKey: true
-    },
-    name: {
-        type: Sequelize.STRING,
-        allowNull: false
+'use strict';
+const {
+  Model
+} = require('sequelize');
+module.exports = (sequelize, DataTypes) => {
+  class Organization extends Model {
+    static associate(models) {
+      // define association here
+      this.belongsTo(models.City);
+      this.hasMany(models.Post);
     }
-});
- 
-module.exports = Organization;
+  };
+  Organization.init({
+    name: DataTypes.STRING
+  }, {
+    sequelize,
+    modelName: 'Organization',
+  });
+  return Organization;
+};
