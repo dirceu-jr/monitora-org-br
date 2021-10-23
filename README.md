@@ -8,4 +8,4 @@ No momento, é gerada uma base de dados SQLite ao executar `npx sequelize-cli db
 
 Para coletar o conteúdo `node ./scrapers/all.js`. Por enquanto tem um script de coleta.
 
-Para gerar o arquivo estático `node ./scrapers/to-static.js`.
+Para gerar a lista `node ./scrapers/to-static.js`.
