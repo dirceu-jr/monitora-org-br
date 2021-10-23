@@ -13,10 +13,17 @@ require('moment/locale/pt-BR');
   
   for (post in posts) {
     list.push('<a href="', posts[post].url,'" target="_blank" class="message">');
-    list.push('<span><img height="16" width="16" src="', organization.favicon, '" /> Afece</span>');
+    list.push('<div class="content">');
+    list.push('<span><img class="favicon" height="16" width="16" src="', organization.favicon, '" /> Afece</span>');
     list.push('<h1>', posts[post].title,'</h1>');
     list.push('<p>', posts[post].digest.replace(/\n/, '').trim().slice(0, 256), '&hellip;</p>');
     list.push('<span>', moment(posts[post].date).format('ll'), '</span>');
+    list.push('</div>');
+    list.push('<div class="image-holder">');
+    if (posts[post].image !== '') {
+      list.push('<img class="post-image" src="', posts[post].image, '">');
+    }
+    list.push('</div>');
     list.push('</a>');
   }
 

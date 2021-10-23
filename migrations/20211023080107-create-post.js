@@ -20,6 +20,9 @@ module.exports = {
       date: {
         type: Sequelize.DATE
       },
+      image: {
+        type: Sequelize.STRING(10240)
+      },
       organizationId: {
         type: Sequelize.INTEGER,
         references: {
